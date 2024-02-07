@@ -1,0 +1,2 @@
+SCRIPT PARA ADICIONAR ESTAÇÕES EM UM COLLECTION NO SCCM
+Get-Content "C:\Scripts\Computers.txt" | foreach { Add-CMDeviceCollectionDirectMembershipRule -CollectionName "NOME DA COLLECTION" -ResourceID (Get-CMDevice -Name $_).ResourceID }
